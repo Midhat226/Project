@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>  
+</head>
+<body>
+<div class="login-form">
+  <h3>Login Form</h3>
+<p><%=(typeof alertMsg!='undefined')? alertMsg:''%></p>
+<form method="post" action="/login">
+      <input type="email" placeholder="Email Address" name="email_address" required">
+      <input type="password" placeholder="Password" name="password" required">
+       <button type="submit">Login Now</button>
+       <a href="/register">New Member?</a>
+  </div>
+</form>
+</div>
+</body>
+</html>
