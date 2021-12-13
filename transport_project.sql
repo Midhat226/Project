@@ -1,3 +1,8 @@
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Midhat123';
+flush privileges;
+
+
 use transport_project;
 
 CREATE TABLE admin (
