@@ -1,5 +1,5 @@
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Midhat123';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
 flush privileges;
 
 
@@ -51,8 +51,8 @@ CREATE TABLE ride_history (
     time           DATE NOT NULL,
     pickup         VARCHAR(255) NOT NULL,
     dropoff        VARCHAR(255) NOT NULL,
-    rating         int NOT NULL,
-    status         VARCHAR(100) NOT NULL,
+    rating         int,
+    status         VARCHAR(100),
     type           VARCHAR(100) NOT NULL,
     user_user_name VARCHAR(100) NOT NULL
 );
@@ -66,8 +66,8 @@ CREATE TABLE driver_history (
     time                        DATE NOT NULL,
     pickup                      VARCHAR(255) NOT NULL,
     dropoff                     VARCHAR(255) NOT NULL,
-    rating                      int NOT NULL,
-    status                      VARCHAR(100) NOT NULL,
+    rating                      int,
+    status                      VARCHAR(100),
     driver_cnic                 bigint NOT NULL,
     ride_history_ride_id        int auto_increment primary key NOT NULL,
     ride_history_status         VARCHAR(100) NOT NULL,
@@ -128,7 +128,7 @@ select *from driver;
 select *from user;
 select *from ride_history;
 select *from driver_history;
-
+select *from feedbacks;
 
 DROP TABLE admin;
 DROP TABLE Cars;
@@ -136,3 +136,4 @@ DROP TABLE user;
 DROP TABLE driver;
 DROP TABLE ride_history;
 DROP TABLE driver_history;
+drop table feedbacks;
