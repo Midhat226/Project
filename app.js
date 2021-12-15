@@ -28,11 +28,17 @@ var loginRouter = require('./routes/login_route');
 var dashboardRouter = require('./routes/dashboard_route');
 var logoutRouter = require('./routes/logout_route');
 var contactusRouter = require('./routes/contactus_route');
+var adminloginRouter = require('./routes/adminlogin_route');
+var adminlogoutRouter = require('./routes/adminlogout_route');
+var admindashboardRouter = require('./routes/admindashboard_route');
 app.use('/', registrationRouter);
 app.use('/', loginRouter);
 app.use('/', dashboardRouter);
 app.use('/', logoutRouter);
 app.use('/', contactusRouter);
+app.use('/', adminloginRouter);
+app.use('/', adminlogoutRouter);
+app.use('/', admindashboardRouter);
 
 //setting up server
 app.listen(3000,()=>{
