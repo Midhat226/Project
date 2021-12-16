@@ -48,7 +48,7 @@ ALTER TABLE User ADD CONSTRAINT user_pk PRIMARY KEY (user_name );
 CREATE TABLE ride_history (
     ride_id        int auto_increment primary key NOT NULL,
     date         DATE NOT NULL,
-    time           DATE NOT NULL,
+    time           varchar(10) NOT NULL,
     pickup         VARCHAR(255) NOT NULL,
     dropoff        VARCHAR(255) NOT NULL,
     rating         int,
@@ -63,7 +63,7 @@ ALTER TABLE ride_history
                             
 CREATE TABLE driver_history (
     date                      DATE NOT NULL,
-    time                        DATE NOT NULL,
+    time                        varchar(10) NOT NULL,
     pickup                      VARCHAR(255) NOT NULL,
     dropoff                     VARCHAR(255) NOT NULL,
     rating                      int,
@@ -108,18 +108,40 @@ INSERT INTO cars (type,commision) VALUES ('First Class',0.75);
 INSERT INTO cars (type,commision) VALUES ('Economy Class',0.25);
 INSERT INTO cars (type,commision) VALUES ('Business Class' , 0.5 );
 
-INSERT INTO driver VALUES ('4210197431394','mohib rehman','karachi',03360022510,'Economy Class' );
-INSERT INTO user VALUES ('mohib rehman',03360022510,'mobs','midz','FAST NU' );
+INSERT INTO driver VALUES ('4210197431394','rutba asghari','islamabad',03360022510,'Economy Class' );
+INSERT INTO driver VALUES ('4210197431325','midhat karim','karachi',03232174357,'Business Class' );
+INSERT INTO driver VALUES ('4210197431237','tatheer fatima','gujrat',03342889638,'First Class Class' );
 
+INSERT INTO user VALUES ('rutba',03360022510,'rutba','rutba','FAST NU' );
+INSERT INTO user VALUES ('tatheer',03342889638,'midhat','midhat','FAST NU' );
+INSERT INTO user VALUES ('mohib rehman',03232174357,'tatheer','heer','FAST NU' );
 
 INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_name)
- VALUES ('13-12-21','00:11:12','karachi','chowkandi',1,'completed','Economy Class','mobs' );
+ VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'completed','Economy Class','rutba' );
+ 
+INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_name)
+ VALUES ('11-12-21','00:12:13','karachi','multan',1,'cancelled','Business Class','midhat' );
+ 
+ INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_name)
+ VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed','First Class','heer' );
+
+
+
 
 SET FOREIGN_KEY_CHECKS=0;
 SET GLOBAL FOREIGN_KEY_CHECKS=0;
 INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('13-12-21','00:11:12','karachi','chowkandi',1,'completed',123456789,1,'completed','mobs');
+ VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'completed',123456789,1,'completed','rutba');
+
+INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
+ride_history_status,ride_history_user_user_name)
+ VALUES ('11-12-21','00:12:13','karachi','multan',1,'cancelled',123456789,2,'cancelled','midhat');
+
+INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
+ride_history_status,ride_history_user_user_name)
+ VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed',123456789,3,'completed','heer');
+
 
 
 select *from admin;
