@@ -123,7 +123,7 @@ INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_
  VALUES ('11-12-21','00:12:13','karachi','multan',1,'cancelled','Business Class','midhat' );
  
  INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_name)
- VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed','First Class','heer' );
+ VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed','First Class','tatheer' );
 
 
 
@@ -132,15 +132,15 @@ SET FOREIGN_KEY_CHECKS=0;
 SET GLOBAL FOREIGN_KEY_CHECKS=0;
 INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'completed',123456789,1,'completed','rutba');
+ VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'completed','4210197431394',1,ride_history.status,'rutba');
 
 INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('11-12-21','00:12:13','karachi','multan',1,'cancelled',123456789,2,'cancelled','midhat');
+ VALUES ('11-12-21','00:12:13','karachi','multan',1,'cancelled','4210197431325',2,'cancelled','midhat');
 
 INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed',123456789,3,'completed','heer');
+ VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed','4210197431237',3,'completed','heer');
 
 
 
