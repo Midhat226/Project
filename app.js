@@ -32,6 +32,20 @@ var adminloginRouter = require('./routes/adminlogin_route');
 var adminlogoutRouter = require('./routes/adminlogout_route');
 var admindashboardRouter = require('./routes/admindashboard_route');
 var bookrideRouter = require('./routes/book_ride_route');
+var driverregisterRouter = require('./routes/driverregister_route');
+var driverloginRouter = require('./routes/driverlogin_route');
+var driverdashboardRouter = require('./routes/driverdashboard_route');
+var driverlogoutRouter = require('./routes/driverlogout_route');
+var boardingpassRouter = require('./routes/boardingpass_route');
+var adminviewRouter = require('./routes/adminviewroute');
+var adminuserviewRouter = require('./routes/adminuserroute');
+var admindriverviewRouter = require('./routes/admindriverroute');
+
+
+app.use('/', driverregisterRouter);
+app.use('/', driverloginRouter);
+app.use('/', driverdashboardRouter);
+app.use('/', driverlogoutRouter);
 app.use('/', UserregistrationRouter);
 app.use('/', UserloginRouter);
 app.use('/', UserdashboardRouter);
@@ -41,7 +55,10 @@ app.use('/', adminloginRouter);
 app.use('/', adminlogoutRouter);
 app.use('/', admindashboardRouter);
 app.use('/', bookrideRouter);
-
+app.use('/', boardingpassRouter);
+app.use('/', adminviewRouter);
+app.use('/', adminuserviewRouter);
+app.use('/', admindriverviewRouter);
 //setting up server
 app.listen(3000,()=>{
     console.log ('Server started on port 3000');
