@@ -66,7 +66,6 @@ CREATE TABLE driver_history (
     pickup                      VARCHAR(255) NOT NULL,
     dropoff                     VARCHAR(255) NOT NULL,
     rating                      int,
-    status                      VARCHAR(100),
     driver_cnic                 bigint NOT NULL,
     ride_history_ride_id        int auto_increment primary key NOT NULL,
     ride_history_status         VARCHAR(100) NOT NULL,
@@ -129,17 +128,17 @@ INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_
 
 SET FOREIGN_KEY_CHECKS=0;
 SET GLOBAL FOREIGN_KEY_CHECKS=0;
-INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
+INSERT INTO driver_history (date,time,pickup,dropoff,rating,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'completed','4210197431394',1,ride_history.status,'rutba');
+ VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'4210197431394',1,ride_history.status,'rutba');
 
-INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
+INSERT INTO driver_history (date,time,pickup,dropoff,rating,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('11-12-21','00:12:13','karachi','multan',1,'cancelled','4210197431325',2,'cancelled','midhat');
+ VALUES ('11-12-21','00:12:13','karachi','multan',1,'4210197431325',2,'cancelled','midhat');
 
-INSERT INTO driver_history (date,time,pickup,dropoff,rating,status,driver_cnic,ride_history_ride_id,
+INSERT INTO driver_history (date,time,pickup,dropoff,rating,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'completed','4210197431237',3,'completed','heer');
+ VALUES ('12-12-21','00:10:12','lahore','hyderabad',1,'4210197431237',3,'completed','heer');
 
 
 
