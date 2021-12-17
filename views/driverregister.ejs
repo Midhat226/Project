@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="registration-form">
+  <h3>Registration Form</h3>
+<form method="post" action="driverregister">
+
+    <div> <input type="text" placeholder = "CNIC" name="cnic" pattern="[0-9]{13}" required > </div> 
+    <div><input type="text" placeholder="Name" name="name" required></div>
+    <div><input type="text" placeholder="Address" name="address" required></div>
+    <div><input type="tel" placeholder="contact" name="contact" pattern="03[0-9]{9}" required></div>
+    <select id="cars_type" name="cars_type">
+        <option value="" disabled selected>Select your car type</option>
+        <option value="Economy Class">Economy Class</option>
+        <option value="Business Class">Business Class</option>
+        <option value="First Class">First Class</option>
+      </select>
+
+<button type="submit">Register Now</button>
+<a href="/driverlogin">Login</a>
+</form>
+</div>
+</body>
+</html>
