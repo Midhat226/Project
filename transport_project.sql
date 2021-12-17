@@ -1,4 +1,3 @@
-
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
 flush privileges;
 
@@ -6,7 +5,7 @@ flush privileges;
 use transport_project;
 
 CREATE TABLE admin (
-    password VARCHAR(100)
+    password VARCHAR(100) primary key not null
 );
 
 CREATE TABLE cars (
@@ -48,7 +47,7 @@ ALTER TABLE User ADD CONSTRAINT user_pk PRIMARY KEY (user_name );
 CREATE TABLE ride_history (
     ride_id        int auto_increment primary key NOT NULL,
     date         DATE NOT NULL,
-    time           varchar(10) NOT NULL,
+    time           LONGTEXT NOT NULL,
     pickup         VARCHAR(255) NOT NULL,
     dropoff        VARCHAR(255) NOT NULL,
     rating         int,
@@ -63,7 +62,7 @@ ALTER TABLE ride_history
                             
 CREATE TABLE driver_history (
     date                      DATE NOT NULL,
-    time                        varchar(10) NOT NULL,
+    time                        LONGTEXT NOT NULL,
     pickup                      VARCHAR(255) NOT NULL,
     dropoff                     VARCHAR(255) NOT NULL,
     rating                      int,
