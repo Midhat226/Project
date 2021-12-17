@@ -111,8 +111,8 @@ INSERT INTO driver VALUES ('4210197431325','midhat karim','karachi',03232174357,
 INSERT INTO driver VALUES ('4210197431237','tatheer fatima','gujrat',03342889638,'First Class Class' );
 
 INSERT INTO user VALUES ('rutba',03360022510,'rutba','rutba','FAST NU' );
-INSERT INTO user VALUES ('tatheer',03342889638,'midhat','midhat','FAST NU' );
-INSERT INTO user VALUES ('mohib rehman',03232174357,'tatheer','heer','FAST NU' );
+INSERT INTO user VALUES ('midhat',03342889638,'midhat','midhat','FAST NU' );
+INSERT INTO user VALUES ('tatheer',03232174357,'tatheer','heer','FAST NU' );
 
 INSERT INTO ride_history (date,time,pickup,dropoff,rating,status,type,user_user_name)
  VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'completed','Economy Class','rutba' );
@@ -130,7 +130,7 @@ SET FOREIGN_KEY_CHECKS=0;
 SET GLOBAL FOREIGN_KEY_CHECKS=0;
 INSERT INTO driver_history (date,time,pickup,dropoff,rating,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
- VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'4210197431394',1,ride_history.status,'rutba');
+ VALUES ('13-12-21','00:11:12','karachi','islamabad',1,'4210197431394',1,'completed','rutba');
 
 INSERT INTO driver_history (date,time,pickup,dropoff,rating,driver_cnic,ride_history_ride_id,
 ride_history_status,ride_history_user_user_name)
