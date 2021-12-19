@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Book My Ride</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+  <div class = "book_ride">
+  <h2>The new way to plan your next trip</h2>
+      <br>
+      <h3>Create a fully customized<br>ride to your destination</h3>
+    <p>
+      <form method="post" action="book_ride">
+        <input type="date" placeholder="mm/dd/yyyy" required name="date">
+        <input type="text" placeholder="HH:MM am/pm" required name="time">
+        <input type="text" placeholder="My Pickup Loction" required name="pickup">
+        <input type="text" placeholder="My Destination" required name="dropoff">
+        <select id="type" name="type">
+          <option value="" disabled selected>Select your car type</option>
+          <option value="Economy Class">Economy Class</option>
+          <option value="Business Class">Business Class</option>
+          <option value="First Class">First Class</option>
+        </select>
+
+      <button type="submit">
+        <i class="fa fa-paper-plane"></i> Confirm Ride Details
+      </button>
+    </form>
+    </p>
+  </div>
+</body>
+</html>
