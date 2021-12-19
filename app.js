@@ -21,8 +21,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //template engine
 app.set('views',path.join(__dirname,'views'));
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
+
+var indexRouter = require('./routes/index');
 var UserregistrationRouter = require('./routes/userregistration_route');
 var UserloginRouter = require('./routes/userlogin_route');
 var UserdashboardRouter = require('./routes/userdashboard_route');
@@ -36,12 +39,15 @@ var driverregisterRouter = require('./routes/driverregister_route');
 var driverloginRouter = require('./routes/driverlogin_route');
 var driverdashboardRouter = require('./routes/driverdashboard_route');
 var driverlogoutRouter = require('./routes/driverlogout_route');
-var boardingpassRouter = require('./routes/boardingpass_route');
+//var boardingpassRouter = require('./routes/boardingpass_route');
 var adminviewRouter = require('./routes/adminviewroute');
 var adminuserviewRouter = require('./routes/adminuserroute');
 var admindriverviewRouter = require('./routes/admindriverroute');
 var userhistoryRouter = require('./routes/userhistory_route');
 var driverhistoryRouter = require('./routes/driverhistory_route');
+var cancelRide = require('./routes/cancelride_route');
+var confirmRide = require('./routes/confirmride_route');
+
 
 app.use('/', driverregisterRouter);
 app.use('/', driverloginRouter);
@@ -56,12 +62,14 @@ app.use('/', adminloginRouter);
 app.use('/', adminlogoutRouter);
 app.use('/', admindashboardRouter);
 app.use('/', bookrideRouter);
-app.use('/', boardingpassRouter);
 app.use('/', adminviewRouter);
 app.use('/', adminuserviewRouter);
 app.use('/', admindriverviewRouter);
 app.use('/', userhistoryRouter);
 app.use('/', driverhistoryRouter);
+app.use('/',cancelRide);
+app.use('/',confirmRide);
+app.use('/',indexRouter);
 
 //setting up server
 app.listen(3000,()=>{
