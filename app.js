@@ -40,7 +40,8 @@ var boardingpassRouter = require('./routes/boardingpass_route');
 var adminviewRouter = require('./routes/adminviewroute');
 var adminuserviewRouter = require('./routes/adminuserroute');
 var admindriverviewRouter = require('./routes/admindriverroute');
-
+var userhistoryRouter = require('./routes/userhistory_route');
+var driverhistoryRouter = require('./routes/driverhistory_route');
 
 app.use('/', driverregisterRouter);
 app.use('/', driverloginRouter);
@@ -59,6 +60,9 @@ app.use('/', boardingpassRouter);
 app.use('/', adminviewRouter);
 app.use('/', adminuserviewRouter);
 app.use('/', admindriverviewRouter);
+app.use('/', userhistoryRouter);
+app.use('/', driverhistoryRouter);
+
 //setting up server
 app.listen(3000,()=>{
     console.log ('Server started on port 3000');
